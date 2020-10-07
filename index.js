@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
-    res.send('Hello Ironhacker!')
+    res.sendFile(__dirname + '/views/landing.html')
 });
 
 app.listen(port, () =>
